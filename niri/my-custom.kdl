@@ -1,0 +1,62 @@
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+output "eDP-1" {
+    mode "1920x1080@60.00" // Set resolution and refresh rate
+    scale 1.2 // No scaling (use 2 for HiDPI)
+}
+
+
+/////// Input file
+input {
+    keyboard {
+        numlock // Enable numlock on startup
+    }
+
+    mouse {
+
+         scroll-factor 1.2
+    }
+
+    focus-follows-mouse max-scroll-amount="60%"
+}
+
+/////// Layout file
+
+layout {
+    focus-ring {
+ 	 width 3
+    }
+    always-center-single-column
+    gaps 9
+}
+
+
+////// MISC file
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+
+/////// Window rules
+window-rule {
+    match app-id="^thunar$" title=r#"^(Rename ".*"|File Operation Progress)$"#
+
+    open-floating true
+}
+
+
+    window-rule {
+    match title="^Task Manager$"
+    open-maximized true
+}
+    window-rule {
+    match app-id="xdman-Main"
+    open-floating true
+}
+
+window-rule {
+    geometry-corner-radius 13
+}
+
