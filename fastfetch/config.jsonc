@@ -1,0 +1,89 @@
+// Inspired by Catnap
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "logo": {
+        "source": "~/.config/fastfetch/cwa-top-bottom.txt",
+        "padding": {
+            "top": 0
+        }
+    },
+
+    "display": {
+        "separator": " "
+    },
+
+    "modules": [
+        { "type": "custom", "key": "╭───────────╮" },
+
+        // Identity
+        {
+            "type": "title",
+            "key": "│ {#96} user    {#keys}│"
+        },
+
+        { "type": "custom", "key": "├───────────┤" },
+
+        // System
+        {
+            "type": "os",
+            "key": "│ {#93}{icon} os      {#keys}│"
+        },
+                {
+            "type": "kernel",
+            "key": "│ {#95} kernel  {#keys}│"
+        },
+        {
+    "type": "command",
+    "key": "│ {#97}󰌢 host    {#keys}│",
+    "text": "cat /sys/devices/virtual/dmi/id/product_name | sed -E 's/ 14 inch//; s/ Notebook PC//'"
+},
+        {
+            "type": "packages",
+            "key": "│ {#92}󰏖 pkg     {#keys}│"
+        },
+        {
+            "type": "uptime",
+            "key": "│ {#94}󱎫 uptime  {#keys}│"
+        },
+
+        { "type": "custom", "key": "├───────────┤" },
+
+        // Desktop
+        {
+            "type": "wm",
+            "key": "│ {#93}󰇄 wm      {#keys}│"
+        },
+        {
+            "type": "shell",
+            "key": "│ {#97} shell   {#keys}│"
+        },
+        {
+            "type": "terminal",
+            "key": "│ {#94} term    {#keys}│"
+        },
+
+        { "type": "custom", "key": "├───────────┤" },
+
+        // Hardware
+        {
+            "type": "cpu",
+            "key": "│ {#95}󰍛 cpu     {#keys}│"
+        },
+        {
+            "type": "gpu",
+            "key": "│ {#92}󰢮 gpu     {#keys}│"
+        },
+        {
+            "type": "memory",
+            "key": "│ {#96}󰘚 memory  {#keys}│"
+        },
+        {
+            "type": "disk",
+            "key": "│ {#93}󰉉 disk    {#keys}│",
+            "folders": ["/"]
+        },
+
+        { "type": "custom", "key": "╰───────────╯" }
+    ]
+}

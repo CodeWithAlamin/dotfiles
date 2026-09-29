@@ -1,0 +1,5 @@
+#!/bin/sh
+win=$(hyprctl activewindow -j | jq '.size[0]')
+mon=$(hyprctl monitors -j | jq '.[] | select(.focused) | .width / .scale')
+w=$(jq -n --argjson w "$win" --argjson m "$mon" 'if $w / $m > 0.75 then 0.5 else 1.0 end')
+hyprctl dispatch "hl.dsp.layout('colresize $w')"
