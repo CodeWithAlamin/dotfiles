@@ -64,3 +64,8 @@ window-rule {
     geometry-corner-radius 13
 }
 
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+}
