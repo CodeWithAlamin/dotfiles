@@ -8,7 +8,7 @@ input {
             // uncomment the line below and change the layout accordingly.
             //layout "us" // Use the American keyboard layout
         }
-       // numlock // Enable numlock on startup
+        numlock // Enable numlock on startup
     }
 
     touchpad {
@@ -21,9 +21,8 @@ input {
         // uncomment the lines below.
         //accel-profile "flat"
         //accel-speed 0.0
-        scroll-factor 1.2
     }
 
-    focus-follows-mouse max-scroll-amount="60%" // Automatically focus windows under the mouse pointer
+    focus-follows-mouse // Automatically focus windows under the mouse pointer
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }

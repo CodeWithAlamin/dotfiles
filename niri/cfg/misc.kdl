@@ -1,5 +1,5 @@
     prefer-no-csd
-    screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
+    screenshot-path null
 
     environment {
         ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -29,9 +29,4 @@
 
     hotkey-overlay {
        skip-at-startup
-    }
-    gestures {
-    hot-corners {
-        off
-    }
     }
