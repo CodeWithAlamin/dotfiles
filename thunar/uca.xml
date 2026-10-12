@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1710000000001</unique-id>
+	<command>kitty --directory &quot;%f&quot;</command>
+	<description>Open Kitty in the selected directory</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>vscode</icon>
+	<name>Open in VS Code</name>
+	<submenu></submenu>
+	<unique-id>1710000000003</unique-id>
+	<command>code --new-window .</command>
+	<description>Open the containing directory in VS Code</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>folder</icon>
+	<name>Open as Root</name>
+	<submenu></submenu>
+	<unique-id>1710000000002</unique-id>
+	<command>pkexec env WAYLAND_DISPLAY=&quot;$WAYLAND_DISPLAY&quot; XDG_RUNTIME_DIR=&quot;$XDG_RUNTIME_DIR&quot; thunar &quot;$(pwd)&quot;</command>
+	<description>Open the selected directory with root privileges</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
